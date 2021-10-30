@@ -2,7 +2,7 @@
 各类数据结构的实现  
 #--linear list...线性表   
  --sequential list...顺序表  
- --sequential list...顺序表  
+ --linked list...单链表  
  --sequential list...顺序表  
  --sequential list...顺序表  
  --sequential list...顺序表 
