@@ -11,8 +11,6 @@
  * ListDelete(&L,i,&e):ɾ��Ԫ��
 */
 
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
