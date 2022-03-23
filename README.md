@@ -1,8 +1,7 @@
-数据结构教程（第五版by李春葆）  
-各类数据结构的实现  
-#--linear list...线性表   
- --sequential list...顺序表  
- --linked list...单链表  
- --sequential list...顺序表  
- --sequential list...顺序表  
- --sequential list...顺序表 
+#鏁版嵁缁撴瀯
+
+##绾挎�ц〃
+###椤哄簭缁撴瀯---------LinearTableByList.c
+###閾惧紡缁撴瀯---------LinearTableByChain.c
+
+##
