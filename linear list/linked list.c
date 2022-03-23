@@ -1,15 +1,18 @@
-//ÏßÐÔ½á¹¹ µ¥Á´±í
+//ï¿½ï¿½ï¿½Ô½á¹¹ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 /**
- * InitList(&L):³õÊ¼»¯Ò»¸öË³Ðò±í
- * DestoryList(&L):Ïú»ÙÒ»¸öË³Ðò±í
- * ListEmpty(L):ÅÐ¶ÏË³Ðò±íÊÇ·ñÎª¿Õ
- * ListLength(L):»ØÈ¥Ë³Ðò±íµÄÔªËØ¸öÊý
- * DisplayList(L):±éÀúË³Ðò±í
- * GetElem(L,i,&e):Í¨¹ýË÷Òý»ñÈ¡Ä³¸öÔªËØ²¢·µ»Ø
- * LocateElem(L,e):²éÕÒÔªËØÊÇ·ñ´æÔÚ
- * ListInsert(&L,i,e):²åÈëÔªËØ
- * ListDelete(&L,i,&e):É¾³ýÔªËØ
+ * InitList(&L):ï¿½ï¿½Ê¼ï¿½ï¿½Ò»ï¿½ï¿½Ë³ï¿½ï¿½ï¿½
+ * DestoryList(&L):ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ë³ï¿½ï¿½ï¿½
+ * ListEmpty(L):ï¿½Ð¶ï¿½Ë³ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½
+ * ListLength(L):ï¿½ï¿½È¥Ë³ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¸ï¿½ï¿½ï¿½
+ * DisplayList(L):ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½
+ * GetElem(L,i,&e):Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡Ä³ï¿½ï¿½Ôªï¿½Ø²ï¿½ï¿½ï¿½ï¿½ï¿½
+ * LocateElem(L,e):ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
+ * ListInsert(&L,i,e):ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
+ * ListDelete(&L,i,&e):É¾ï¿½ï¿½Ôªï¿½ï¿½
 */
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,28 +28,28 @@ int InitList(LinkNode *L)
     int n=0;
     LinkNode * temp,*rear;
     rear=L;
-    printf("ÇëÊäÈëÒª´´½¨µÄÁ´±í³¤¶È£º\n");
+    printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½\n");
     scanf("%d",&n);
     for (int i = 1; i <= n; i++)
     {
         temp=(LinkNode *)malloc(sizeof(LinkNode));
-        printf("ÇëÊäÈëµÚ%dÃûÐÕÃû£º",i);
+        printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",i);
         scanf("%S",temp->name);
-        printf("ÇëÊäÈëµÚ%dÃûÄêÁä£º",i);
+        printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%dï¿½ï¿½ï¿½ï¿½ï¿½ä£º",i);
         scanf("%d",&(temp->age));
-        printf("ÇëÊäÈëµÚ%dÃûÐÔ±ð£º",i);
+        printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%dï¿½ï¿½ï¿½Ô±ï¿½",i);
         scanf("%s",temp->sex);
-        rear->next=temp;//Î²²å·¨
+        rear->next=temp;//Î²ï¿½å·¨
         rear=temp;
         /**
-         * Í·²å·¨£º
+         * Í·ï¿½å·¨ï¿½ï¿½
          * temp->next=L->next;
          * L->next=temp;
          * 
         */
     }
     rear->next=NULL;
-    printf("³õÊ¼»¯Íê³É£¡\n");
+    printf("ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½É£ï¿½\n");
     return 0;
 }
 int DestoryList(LinkNode *L)
@@ -86,7 +89,7 @@ void DisplayList(LinkNode *L)
     while (temp!=NULL)
     {
         length++;
-        printf("%d.ÐÕÃû£º%s  ÐÔ±ð£º%s   ÄêÁä£º%d\n",length,temp->name,temp->sex,temp->age);
+        printf("%d.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%s  ï¿½Ô±ï¿½%s   ï¿½ï¿½ï¿½ä£º%d\n",length,temp->name,temp->sex,temp->age);
         temp=temp->next;  
     }
     return 0;
@@ -151,36 +154,36 @@ int main(){
     InitList(L);
     DisplayList(L);
     //
-    ListEmpty(L)?printf("Îª¿Õ£¡\n"):printf("²»Îª¿Õ£¡\n");
+    ListEmpty(L)?printf("Îªï¿½Õ£ï¿½\n"):printf("ï¿½ï¿½Îªï¿½Õ£ï¿½\n");
     //
-    printf("Á´±í³¤¶ÈÎª£º%d\n",ListLength(L));
+    printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½%d\n",ListLength(L));
     DisplayList(L);
     //
-    printf("ÊäÈëÒª²éÕÒµÄË÷Òý£º");
+    printf("ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
     int index;
     scanf("%d",&index);
     LinkNode * node=GetElem(L,index);
-    printf("Ë÷ÒýÎª%d£º%s  %s  %d",index,node->name,node->sex,node->age);
-    printf("ÊäÈëÒª²éÕÒµÄÐÕÃû£º");
+    printf("ï¿½ï¿½ï¿½ï¿½Îª%dï¿½ï¿½%s  %s  %d",index,node->name,node->sex,node->age);
+    printf("ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
     char name[100];
     scanf("%s",name);
-    LocateElem(L,name)?printf("´æÔÚ£¡\n"):printf("²»´æÔÚ£¡\n");
+    LocateElem(L,name)?printf("ï¿½ï¿½ï¿½Ú£ï¿½\n"):printf("ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½\n");
     LinkNode Insertnode;
-    printf("²åÈë£º\n");
-    printf("ÐÕÃû£º");
+    printf("ï¿½ï¿½ï¿½ë£º\n");
+    printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
     scanf("%s",Insertnode.name);
-    printf("ÐÔ±ð£º");
+    printf("ï¿½Ô±ï¿½");
     scanf("%s",Insertnode.sex);
-    printf("ÄêÁä£º");
+    printf("ï¿½ï¿½ï¿½ä£º");
     scanf("%s",&(Insertnode.age));
     int num;
-    printf("²åÈëÎ»ÖÃ£º");
+    printf("ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã£ï¿½");
     scanf("%d",&num);
     ListInsert(L,num,&Insertnode);
     DisplayList(L);
 
-    printf("É¾³ý£¡\n");
-    printf("É¾³ýÎ»ÖÃ£º");
+    printf("É¾ï¿½ï¿½ï¿½ï¿½\n");
+    printf("É¾ï¿½ï¿½Î»ï¿½Ã£ï¿½");
     scanf("%d",&num);
     LinkNode deletenode;
     ListDelete(L,num,&deletenode);
